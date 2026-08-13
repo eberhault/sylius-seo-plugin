@@ -28,8 +28,14 @@ trait ReferenceableTrait
                     $this->referenceableFallbackLocale = $this->fallbackLocale;
                 }
             }
-            $this->referenceableContent->setCurrentLocale($this->referenceableLocale);
-            $this->referenceableContent->setFallbackLocale($this->referenceableFallbackLocale);
+
+            if ($this->referenceableLocale) {
+                $this->referenceableContent->setCurrentLocale($this->referenceableLocale);
+            }
+
+            if ($this->referenceableFallbackLocale) {
+                $this->referenceableContent->setFallbackLocale($this->referenceableFallbackLocale);
+            }
         }
 
         return $this->referenceableContent;

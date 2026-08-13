@@ -18,11 +18,11 @@
                 <aside class="preview-url">
                     {{ sylius.channel.hostname }} <i class="caret down icon"></i>
                 </aside>
-                <h3 class="preview-title"></h3>
+                <h3 class="preview-title">{{ resource.openGraphMetadataTitle|default(resource.metadataTitle) }}</h3>
             </header>
 
             <div class="preview-content">
-                <p class="preview-description"></p>
+                <p class="preview-description">{{ resource.openGraphMetadataDescription|default(resource.metadataDescription) }}</p>
             </div>
         </div>
     </div>
@@ -37,12 +37,12 @@
 
             <div class="preview-right">
                 <header class="preview-header">
-                    <h3 class="preview-title"></h3>
+                    <h3 class="preview-title">{{ resource.openGraphMetadataTitle|default(resource.metadataTitle) }}</h3>
                 </header>
 
                 <div class="preview-content">
-                    <p class="preview-description"></p>
-                    <aside class="preview-url"></aside>
+                    <p class="preview-description">{{ resource.openGraphMetadataDescription|default(resource.metadataDescription) }}</p>
+                    <aside class="preview-url">{{ resource.openGraphMetadataUrl|default(sylius.channel.hostname) }}</aside>
                 </div>
             </div>
         </div>
@@ -58,12 +58,12 @@
 
             <div class="preview-right">
                 <header class="preview-header">
-                    <aside class="preview-url"></aside>
-                    <h3 class="preview-title"></h3>
+                    <aside class="preview-url">{{ resource.openGraphMetadataUrl|default(sylius.channel.hostname) }}</aside>
+                    <h3 class="preview-title">{{ resource.openGraphMetadataTitle|default(resource.metadataTitle) }}</h3>
                 </header>
 
                 <div class="preview-content">
-                    <p class="preview-description"></p>
+                    <p class="preview-description">{{ resource.openGraphMetadataDescription|default(resource.metadataDescription) }}</p>
                 </div>
             </div>
         </div>
